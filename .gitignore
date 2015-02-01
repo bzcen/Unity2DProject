@@ -10,3 +10,5 @@ Temp/
 *.userprefs
 *.pidb
 *.booproj
+Obj/
+Build/
