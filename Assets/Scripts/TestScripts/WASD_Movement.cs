@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WASD_Movement : MonoBehaviour {
 
-	private float speed = 20.0f;
+public float speed = 20.0f;
 	// Use this for initialization
 	void Start () {
 	
