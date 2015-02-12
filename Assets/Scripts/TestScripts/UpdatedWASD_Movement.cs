@@ -5,11 +5,11 @@ public class UpdatedWASD_Movement : MonoBehaviour {
 
 	public float speed = 20.0f;
 
-	private Rigidbody2D playerRigidbody2D;
+	private Rigidbody playerRigidbody;
 
 	// Use this for initialization
 	void Start () {
-		playerRigidbody2D  = GetComponent <Rigidbody2D> ();
+		playerRigidbody  = GetComponent <Rigidbody> ();
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,7 @@ public class UpdatedWASD_Movement : MonoBehaviour {
 	void move(float h, float v){
 		Vector3 movement = new Vector3 (h, v, 0f);
 		movement = movement.normalized * speed * Time.deltaTime;
-		playerRigidbody2D.MovePosition(transform.position + movement);
+		playerRigidbody.MovePosition(transform.position + movement);
 	}
 
 	void turn(){
@@ -32,7 +32,7 @@ public class UpdatedWASD_Movement : MonoBehaviour {
 		var screenPoint = Camera.main.WorldToScreenPoint(transform.localPosition);
 		var offset = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
 		var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-		playerRigidbody2D.MoveRotation (angle);
+		transform.rotation = Quaternion.Euler(0, 0, angle);
 	}
 
 }
