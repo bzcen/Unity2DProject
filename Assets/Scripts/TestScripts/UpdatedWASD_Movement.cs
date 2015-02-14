@@ -24,7 +24,8 @@ public class UpdatedWASD_Movement : MonoBehaviour {
 	void move(float h, float v){
 		Vector3 movement = new Vector3 (h, v, 0f);
 		movement = movement.normalized * speed * Time.deltaTime;
-		playerRigidbody.MovePosition(transform.position + movement);
+		Vector3 finalPosition = new Vector3 (movement.x + transform.position.x, movement.y + transform.position.y, 0f);
+		playerRigidbody.MovePosition(finalPosition);
 	}
 
 	void turn(){
