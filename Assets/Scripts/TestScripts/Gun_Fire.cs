@@ -12,7 +12,7 @@ public class Gun_Fire : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		float spawn_distance = 3.0f;
+		float spawn_distance = 2.5f;
 	
 		if (Input.GetMouseButtonDown (0)) {
 
