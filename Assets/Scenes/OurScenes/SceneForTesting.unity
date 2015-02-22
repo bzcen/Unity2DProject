@@ -1043,7 +1043,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1800906202}
   m_GameObject: {fileID: 1016098679}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .25
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0
@@ -1063,6 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 469347082}
+  speed: 20
 --- !u!1001 &1276557334
 Prefab:
   m_ObjectHideFlags: 0
@@ -1342,6 +1343,10 @@ Prefab:
     - target: {fileID: 5434130, guid: 6a6b1307f9b8d6f438a5c38a0e682c75, type: 2}
       propertyPath: m_AngularDrag
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5434130, guid: 6a6b1307f9b8d6f438a5c38a0e682c75, type: 2}
+      propertyPath: m_Mass
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a6b1307f9b8d6f438a5c38a0e682c75, type: 2}
