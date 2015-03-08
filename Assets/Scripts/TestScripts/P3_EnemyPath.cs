@@ -3,22 +3,31 @@ using System.Collections;
 
 public class P3_EnemyPath : MonoBehaviour {
 
+	
 	public GameObject p1;
 	public GameObject p2;
 	public GameObject p3;
 	
+	// waypoints
+	
+	public string rotation_dir_1_to_2;
+	public string rotation_dir_2_to_3;
+	public string rotation_dir_3_to_1;
+	
+	// c = clock-wise
+	// cc = counter-clock-wise
+	
 	
 	private int state;
 	private int max_state;
-	private bool turn;
-	
 	public float speed;
+	public float rspeed;
 	
 	// Use this for initialization
 	void Start () {
 		state = 1;
-		turn = false;
-		max_state = 3;
+		//		turn = false;
+		max_state = 6;
 		
 	}
 	
@@ -28,16 +37,22 @@ public class P3_EnemyPath : MonoBehaviour {
 		switch(state){
 			
 		case 1:
-			MoveTowards (p1);
-			TurnTo(p2);
+			TurnTo (p1,rotation_dir_3_to_1);
 			break;
 		case 2:
-			MoveTowards (p2);
-			TurnTo(p1);
+			MoveTowards (p1);
 			break;
 		case 3:
+			TurnTo (p2,rotation_dir_1_to_2);
+			break;
+		case 4:
+			MoveTowards (p2);
+			break;
+		case 5:
+			TurnTo (p3,rotation_dir_2_to_3);
+			break;
+		case 6:
 			MoveTowards (p3);
-			TurnTo(p1);
 			break;
 		}
 		
@@ -52,18 +67,27 @@ public class P3_EnemyPath : MonoBehaviour {
 			} else {
 				state = 1;
 			}
-			turn = true;
 			
 		} else {
 			transform.position = Vector2.MoveTowards(transform.position, point.transform.position, speed*Time.deltaTime);
 		}
 	}
-	void TurnTo(GameObject point){
-		if (turn) {
-			var offset = new Vector2(transform.position.x - point.transform.position.x, transform.position.y - point.transform.position.y);
-			var angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
-			transform.rotation = Quaternion.Euler(0, 0, angle);
-			turn = false;
+	void TurnTo(GameObject point, string type){
+		var offset = new Vector2 (point.transform.position.x - transform.position.x, point.transform.position.y - transform.position.y);
+		var angle = Vector2.Angle (transform.right, offset);
+		
+		if (angle <= 5.0f){
+			if (state < max_state){
+				state += 1;
+			} else {
+				state = 1;
+			}
+		} else {
+			if (type == "c"){
+				transform.Rotate(0,0,-rspeed * Time.deltaTime);
+			} else if (type == "cc"){
+				transform.Rotate(0,0,rspeed * Time.deltaTime);
+			}
 		}
 	}
 }
