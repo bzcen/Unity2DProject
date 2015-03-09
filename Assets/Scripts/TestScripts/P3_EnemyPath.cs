@@ -26,7 +26,6 @@ public class P3_EnemyPath : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		state = 1;
-		//		turn = false;
 		max_state = 6;
 		
 	}
