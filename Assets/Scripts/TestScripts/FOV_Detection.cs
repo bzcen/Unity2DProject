@@ -12,10 +12,10 @@ public class FOV_Detection : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnCollisionEnter2D(Collision2D other){
-	//	if (other.gameObject.tag == "Player"){
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag == "Player"){
 			Debug.Log("Player collided");
-	//	}
+		}
 
 	}
 }
