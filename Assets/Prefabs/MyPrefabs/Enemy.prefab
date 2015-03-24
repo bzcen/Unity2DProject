@@ -12,9 +12,9 @@ GameObject:
   - 212: {fileID: 21234130}
   - 135: {fileID: 13534130}
   - 114: {fileID: 11434130}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

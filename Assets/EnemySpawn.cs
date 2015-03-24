@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class EnemySpawn : MonoBehaviour {
-	public float spawnTime = 5f;
-	public float spawnDelay = 3f;
+	public float spawnTime = 15f;
+	public float spawnDelay = 9f;
 	public GameObject[] enemies;		
 
 	// Use this for initialization

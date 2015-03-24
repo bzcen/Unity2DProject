@@ -25,13 +25,16 @@ public class FOV_Detection : MonoBehaviour {
 			// BIG NOTE: this only works if the object that holds the cone collision box is set to "Ignore Raycast" in "Layer", or else the raycast will immediately just hit the cone itself
 			if (hit.collider != null) {
 				if (hit.transform.tag == "Player") {
-			
 					Debug.Log ("Player collided");
-				} else {
+				} else if(hit.transform.tag == "Bullet"){
+					Debug.Log ("Shots Fired");
+				}else{
 					Debug.Log ("Something is in the way");
 				}
 			} else {
+
 				Debug.Log ("Nothing hit!");
+			
 			}
 		}
 

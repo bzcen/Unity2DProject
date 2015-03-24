@@ -311,7 +311,7 @@ Transform:
   m_PrefabParentObject: {fileID: 476894, guid: c1a689d6efd2246c59f74ae976d88346, type: 2}
   m_PrefabInternal: {fileID: 950099104}
   m_GameObject: {fileID: 416032758}
-  m_LocalRotation: {x: 0, y: 0, z: .70710659, w: -.707106948}
+  m_LocalRotation: {x: 0, y: 0, z: .70710665, w: -.707107008}
   m_LocalPosition: {x: 1, y: .610000014, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
@@ -1373,11 +1373,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476894, guid: c1a689d6efd2246c59f74ae976d88346, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .70710659
+      value: .70710665
       objectReference: {fileID: 0}
     - target: {fileID: 476894, guid: c1a689d6efd2246c59f74ae976d88346, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -.707106948
+      value: -.707107008
       objectReference: {fileID: 0}
     - target: {fileID: 476894, guid: c1a689d6efd2246c59f74ae976d88346, type: 2}
       propertyPath: m_RootOrder
@@ -1459,7 +1459,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 962669774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0900000036, y: .0900000036, z: 0}
+  m_LocalPosition: {x: -.100000001, y: .100000001, z: 0}
   m_LocalScale: {x: .579999983, y: .589999974, z: 1}
   m_Children:
   - {fileID: 416032759}
@@ -1558,9 +1558,9 @@ GameObject:
   - 135: {fileID: 1016098682}
   - 114: {fileID: 1016098681}
   - 114: {fileID: 1016098685}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1960,11 +1960,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1295679538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e8197b97b4a4fa2ab4c51e208a70f4, type: 3}
+  m_Script: {fileID: 11500000, guid: cfe1e47f64c250943a14e0e913ddebe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 1
-  spawnDelay: 1
+  spawnTime: 5
+  spawnDelay: 0
   enemies:
   - {fileID: 134130, guid: 6a6b1307f9b8d6f438a5c38a0e682c75, type: 2}
 --- !u!1 &1312822953
@@ -1989,7 +1989,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312822953}
-  m_LocalRotation: {x: 0, y: 0, z: .70710659, w: -.707106948}
+  m_LocalRotation: {x: 0, y: 0, z: .70710665, w: -.707107008}
   m_LocalPosition: {x: -5.71000004, y: -23.2700005, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
