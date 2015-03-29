@@ -6,7 +6,7 @@ public class Bullet_Behavior : MonoBehaviour {
 	private float force = 2000.0f;
 	// Use this for initialization
 	void Start () {
-		rigidbody.AddForce (transform.right * force);
+		rigidbody2D.AddForce (transform.right * force);
 		Debug.Log ("Bullet Shot");
 	}
 	
@@ -15,7 +15,7 @@ public class Bullet_Behavior : MonoBehaviour {
 		//gameObject.transform.position += (Time.deltaTime * speed * transform.forward);
 	}
 
-	void OnCollisionEnter(){
+	void OnCollisionEnter2D(){
 		Destroy (gameObject);
 	}
 }
