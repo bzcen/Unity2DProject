@@ -13,6 +13,11 @@ public class FOV_Detection : MonoBehaviour {
 	void Update () {
 	
 	}
+	void SendSignal(){
+		GameObject parent = transform.parent.gameObject;
+		EnemyAI script = (EnemyAI) parent.GetComponent(typeof(EnemyAI));
+		script.ToggleAlerted ();;
+	}
 	void OnTriggerEnter2D(Collider2D other){
 		// if the player enters the collision cone field
 		if (other.gameObject.tag == "Player"){
@@ -26,6 +31,7 @@ public class FOV_Detection : MonoBehaviour {
 			if (hit.collider != null) {
 				if (hit.transform.tag == "Player") {
 					Debug.Log ("Player collided");
+					SendSignal();
 				} else if(hit.transform.tag == "Bullet"){
 					Debug.Log ("Shots Fired");
 				}else{

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class P2_EnemyPath : MonoBehaviour {
+public class P2_EnemyPath : EnemyAI {
 
 	public GameObject p1;
 	public GameObject p2;
@@ -21,14 +21,15 @@ public class P2_EnemyPath : MonoBehaviour {
 	public float rspeed;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
 		state = 1;
 		max_state = 4;
+		alerted = false;
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public override void Update () {
 	
 		switch(state){
 
@@ -84,5 +85,9 @@ public class P2_EnemyPath : MonoBehaviour {
 				transform.Rotate(0,0,rspeed * Time.deltaTime);
 			}
 		}
+	}
+	public override void ToggleAlerted(){
+		Debug.Log ("alerted");
+		alerted = true;
 	}
 }
