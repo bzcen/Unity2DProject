@@ -16,7 +16,7 @@ public class FOV_Detection : MonoBehaviour {
 	void SendSignal(){
 		GameObject parent = transform.parent.gameObject;
 		EnemyAI script = (EnemyAI) parent.GetComponent(typeof(EnemyAI));
-		script.ToggleAlerted ();;
+		script.playerDetectedOn ();
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		// if the player enters the collision cone field

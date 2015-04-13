@@ -3,8 +3,6 @@ using System.Collections;
 
 public class P3_EnemyPath : EnemyAI {
 
-//	private bool alerted;
-	
 	public GameObject p1;
 	public GameObject p2;
 	public GameObject p3;
@@ -28,7 +26,7 @@ public class P3_EnemyPath : EnemyAI {
 	public override void Start () {
 		state = 1;
 		max_state = 6;
-		alerted = false;
+		playerDetected = false;
 	}
 	
 	// Update is called once per frame
@@ -89,9 +87,5 @@ public class P3_EnemyPath : EnemyAI {
 				transform.Rotate(0,0,rspeed * Time.deltaTime);
 			}
 		}
-	}
-	public override void ToggleAlerted(){
-		Debug.Log ("alerted");
-		alerted = true;
 	}
 }

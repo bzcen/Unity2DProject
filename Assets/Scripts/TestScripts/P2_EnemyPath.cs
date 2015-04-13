@@ -24,7 +24,7 @@ public class P2_EnemyPath : EnemyAI {
 	public override void Start () {
 		state = 1;
 		max_state = 4;
-		alerted = false;
+		playerDetected = false;
 	
 	}
 	
@@ -85,9 +85,5 @@ public class P2_EnemyPath : EnemyAI {
 				transform.Rotate(0,0,rspeed * Time.deltaTime);
 			}
 		}
-	}
-	public override void ToggleAlerted(){
-		Debug.Log ("alerted");
-		alerted = true;
 	}
 }

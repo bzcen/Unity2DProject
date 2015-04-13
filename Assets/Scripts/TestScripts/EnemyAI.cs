@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyAI : MonoBehaviour {
 
-	public bool alerted;
+	public bool playerDetected;
 
 	// Use this for initialization
 	public virtual void Start () {
@@ -15,7 +15,10 @@ public class EnemyAI : MonoBehaviour {
 	
 	}
 
-	public virtual void ToggleAlerted(){
-
+	public void playerDetectedOn(){
+		playerDetected = true;
 	}
+	public void playerDetectedOff(){
+				playerDetected = false;
+		}
 }
