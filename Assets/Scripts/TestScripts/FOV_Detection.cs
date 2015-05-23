@@ -20,7 +20,7 @@ public class FOV_Detection : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D other){
 		// if the player enters the collision cone field
-		if (other.gameObject.tag == "Player"){
+		if (other.gameObject.tag == "Player" || other.gameObject.tag == "Bullet"){
 
 			// set a raycast in the direction of the player from the beginning point of the cone
 			var rayDirection = other.transform.position - transform.position;
