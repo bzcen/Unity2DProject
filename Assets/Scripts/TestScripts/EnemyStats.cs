@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyAI : MonoBehaviour {
+public class EnemyStats : MonoBehaviour {
 
-	protected bool playerDetected;
-	
-
+	protected int health;
 
 	// Use this for initialization
 	public virtual void Start () {
@@ -17,11 +15,6 @@ public class EnemyAI : MonoBehaviour {
 	
 	}
 
-	public void playerDetectedOn(){
-		playerDetected = true;
+	public virtual void decreaseHealth(int x){
 	}
-	public void playerDetectedOff(){
-		playerDetected = false;
-	}
-
 }

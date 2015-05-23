@@ -1678,9 +1678,11 @@ GameObject:
   - 4: {fileID: 962669777}
   - 212: {fileID: 962669776}
   - 114: {fileID: 962669775}
+  - 58: {fileID: 962669779}
+  - 114: {fileID: 962669778}
   m_Layer: 0
   m_Name: TestPathEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1696,7 +1698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ad82e3b15184519a57252ba81d0862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alerted: 0
   p1: {fileID: 1879395963}
   p2: {fileID: 13118006}
   rotation_dir_1_to_2: cc
@@ -1738,6 +1739,28 @@ Transform:
   - {fileID: 416032759}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+--- !u!114 &962669778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962669774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f912f61b9c9464494bd7f92e1727c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &962669779
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 962669774}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 2.33999991
+  m_Center: {x: 0, y: 0}
 --- !u!1001 &986941408
 Prefab:
   m_ObjectHideFlags: 0
@@ -2761,9 +2784,11 @@ GameObject:
   - 4: {fileID: 1916825528}
   - 212: {fileID: 1916825527}
   - 114: {fileID: 1916825526}
+  - 58: {fileID: 1916825530}
+  - 114: {fileID: 1916825529}
   m_Layer: 0
   m_Name: TestPathEnemy2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2779,7 +2804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d56b07b78a24a809c6ba5fb8437de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alerted: 0
   p1: {fileID: 1879395963}
   p2: {fileID: 13118006}
   p3: {fileID: 667924898}
@@ -2823,6 +2847,28 @@ Transform:
   - {fileID: 847867595}
   m_Father: {fileID: 0}
   m_RootOrder: 11
+--- !u!114 &1916825529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916825525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f912f61b9c9464494bd7f92e1727c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1916825530
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916825525}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 2.79999995
+  m_Center: {x: 0, y: 0}
 --- !u!1 &1964172256
 GameObject:
   m_ObjectHideFlags: 0

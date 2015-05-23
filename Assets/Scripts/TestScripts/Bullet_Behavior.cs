@@ -15,7 +15,11 @@ public class Bullet_Behavior : MonoBehaviour {
 		//gameObject.transform.position += (Time.deltaTime * speed * transform.forward);
 	}
 
-	void OnCollisionEnter2D(){
+	void OnCollisionEnter2D(Collision2D other){
 		Destroy (gameObject);
+		if (other.gameObject.tag == "Enemy") {
+						EnemyStats script = (EnemyStats)other.gameObject.GetComponent (typeof(EnemyStats));
+						script.decreaseHealth (1);
+				}
 	}
 }
